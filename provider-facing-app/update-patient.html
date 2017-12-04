@@ -1,0 +1,35 @@
+<style type="text/css" media="screen">
+.dialog-label { min-width: 8em; }
+.dialog-button-area { text-align: center; margin-top: 1em; }
+.update-patient-warning { display: none; color: red; font-size: 13px; font-weight: bold; }
+#update-patient-processing { display: none; }
+</style>
+<form id="update-patient" action="update-patient_submit" method="get" accept-charset="utf-8"
+ onsubmit="event.preventDefault(); return GC.App.UpdatePatient(document.querySelector('#update-patient'));" >
+<div>
+  <label class="dialog-label" for="updateWeight">Weight:</label>
+  <input type="number" step="0.01" id="updateWeight" name="updateWeight">
+  kg
+  <div id="weight-warning" class="update-patient-warning">Invalid or missing value for weight.</div>
+</div>
+<div>
+  <label class="dialog-label" for="updateHeight">Height:</label>
+  <input type="number" step="0.01" id="updateHeight" name="updateHeight">
+  cm
+  <div id="height-warning" class="update-patient-warning">Invalid or missing value for height.</div>
+</div>
+<div>
+  <label class="dialog-label" for="updateHemo">Hemoglobin:</label>
+  <input type="number" step="0.0001" id="updateHemo" name="updateHemo">
+  mg/dL
+  <div id="hemo-warning" class="update-patient-warning">Invalid or missing value for hemoglobin.</div>
+</div>
+<div class="dialog-button-area">
+  <input type="submit" value="Submit" id="update-patient-submit">
+  <div id="update-patient-processing">
+    Processing...
+  </div>
+</div>
+
+
+</form>

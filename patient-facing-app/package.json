@@ -1,0 +1,26 @@
+{
+  "name": "questionnaire",
+  "version": "1.0.0",
+  "description": "patient facing app for helping address childhood obesity",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR.git"
+  },
+  "keywords": [
+    "fhir",
+    "bmi",
+    "weight",
+    "healthy"
+  ],
+  "author": "Team Science Freaks",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "fhir.js": "0.0.20"
+  }
+}

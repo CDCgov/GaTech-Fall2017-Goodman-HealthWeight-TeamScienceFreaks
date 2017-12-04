@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Hey Hey Hey!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        Send
+        <select id="messageMethod">
+            <option>email</option>
+            <option>text</option>
+        </select> message recommending
+        <select id="messageType">
+            <option>farmers markets</option>
+            <option>parks</option>
+        </select> for zip code
+        <input type="text" id="zipCode" /> to
+        <input type="text" id="messageDestination" />.
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <div>
+        <a id="messagePreview" target="_new">Message</a>
+    </div>
+    <script>
+        function sendMessage() {
+            var messageLink = $("#messagePreview");
+            messageLink.attr("href", null);
+            var method = $("#messageMethod").find(":selected").index() == 0 ? "Email" : "Sms";
+            var type = $("#messageType").find(":selected").index() == 0 ? "fm" : "pk";
+            var zipCode = $("#zipCode").val();
+            var destination = $("#messageDestination").val();
+            var data = {
+                recommendationType: type,
+                destination: destination,
+                zipCode: zipCode,
+                testMessage: true
+            }
+            $.post("./send" + method, data, function (res) { if (res) messageLink.attr("href", res); });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,7 @@
+FROM node:8
+
+COPY ./provider-facing-app .
+
+RUN npm install -g http-server
+
+CMD ["http-server", "-p 8081", "."]

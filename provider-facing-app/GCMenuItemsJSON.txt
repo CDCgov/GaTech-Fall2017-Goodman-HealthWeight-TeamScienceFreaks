@@ -1,0 +1,20 @@
+[
+    {
+        "label": "CDC",
+        "value": "CDC"
+    },
+    {
+        "label": "WHO",
+        "value": "WHO"
+    },
+    "-",
+    {
+        "label": "Fenton",
+        "value": "FENTON"
+    },
+    {
+        "label": "Olsen",
+        "value": "OLSEN"
+    }
+]
+

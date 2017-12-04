@@ -1,0 +1,97 @@
+
+{
+    "resourceType":"Patient",
+    
+    "meta":{
+        "versionId":"5",
+        "lastUpdated":"2017-03-10T14:59:18.241-05:00"
+    },
+    "text":{
+        "status":"generated",
+        "div":"<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\"> Clark <b>KENT </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>123456789</td></tr><tr><td>Address</td><td><span>123 Main Street </span><br /><span>Metropolis </span><span>IL </span></td></tr><tr><td>Date of birth</td><td><span>30 August 2006</span></td></tr></tbody></table></div>"
+    },
+    "extension":[
+        {
+            "url":"http://hl7.org/fhir/StructureDefinition/us-core-race",
+            "valueCodeableConcept":{
+                "coding":[
+                    {
+                        "system":"http://hl7.org/fhir/v3/Race",
+                        "code":"2106-3",
+                        "display":"White"
+                    }
+                ]
+            }
+        },
+        {
+            "url":"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity",
+            "valueCodeableConcept":{
+                "coding":[
+                    {
+                        "system":"http://hl7.org/fhir/v3/Ethnicity",
+                        "code":"2186-5",
+                        "display":"Not Hispanic or Latino"
+                    }
+                ]
+            }
+        },
+        {
+            "url":"http://hl7.org/fhir/StructureDefinition/us-core-religion",
+            "valueCodeableConcept":{
+                "coding":[
+                    {
+                        "system":"http://hl7.org/fhir/v3/ReligiousAffiliation",
+                        "code":"1077",
+                        "display":"Protestant"
+                    }
+                ]
+            }
+        }
+    ],
+    "identifier":[
+        {
+            "use":"official",
+            "type":{
+                "coding":[
+                    {
+                        "system":"http://hl7.org/fhir/v2/0203",
+                        "code":"TAX"
+                    }
+                ],
+                "text":"US Social Security Number"
+            },
+            "system":"http://hl7.org/fhir/sid/us-ssn",
+            "value":"123456789"
+        }
+    ],
+    "active":false,
+    "name":[
+        {
+            "family":[
+                "Kent"
+            ],
+            "given":[
+                "Clark"
+            ]
+        }
+    ],
+    "telecom":[
+        {
+            "system":"phone",
+            "value":"212.555.1234",
+            "use":"home"
+        }
+    ],
+    "gender":"male",
+    "birthDate":"2011-03-30",
+    "address":[
+        {
+            "line":[
+                "123 Main Street"
+            ],
+            "city":"Metropolis",
+            "state":"NY",
+            "postalCode":"10001"
+        }
+    ]
+}

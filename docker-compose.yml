@@ -1,0 +1,30 @@
+version: '2'
+services:
+  patient:
+    build:
+      context: .
+      dockerfile: PatientDockerfile
+    ports:
+      - "8082:8082"
+    depends_on:
+      - fhir_server
+      - recommendation
+  recommendation:
+    build:
+      context: .
+      dockerfile: RecommendationDockerfile
+    ports:
+      - "8083:8083"
+  provider:
+    build:
+      context: .
+      dockerfile: ProviderDockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - fhir_server
+      - recommendation
+  fhir_server:
+    image: jgeorge84/hw-fhir
+    ports:
+      - "8080:8080"
