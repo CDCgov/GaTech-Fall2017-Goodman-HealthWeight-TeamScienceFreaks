@@ -2,7 +2,7 @@
 **Project Name:** Health Weight on FHIR  
 **Team Name:** Team ScienceFreaks  
 **Team Members:** Lance Hundt, Michael Roth, Hassan Borteh, Joseph George, Jim Vaughan, Brodrick Stigall  
-**Github Link:** https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR   
+**Github Link:** https://github.com/CDCgov/GaTech-Fall2017-Goodman-HealthWeight-TeamScienceFreaks   
 
 ## Introduction ##
 
@@ -30,7 +30,7 @@ When we analyzed the applications, each application was written in a different l
 
 ### Developer Steps ###  
 
-1. Clone the repo from https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR.git
+1. Clone the repo from https://github.com/CDCgov/GaTech-Fall2017-Goodman-HealthWeight-TeamScienceFreaks
 2. Make sure docker is installed and running
 3. In a command prompt, from the root of the repo, run “docker-compose up” (without the quotes)
 4. Wait for a message similar to  org.apache.catalina.startup.Catalina.start Server startup in 25949 ms (the time portion will most likely be different)
@@ -56,7 +56,7 @@ The Patient facing app is used to collect responses of a basic healthy habit que
 
 Our mentors updated the questions on the Questionnaire and corresponding sample QuestionnaireResponses were loaded into the database.
 
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/PatientFacing2.PNG "PatientFacingQuestionnaire")
+![alt text](./IMG/PatientFacing2.PNG "PatientFacingQuestionnaire")
 
 ### Navigating the App ###
 1. Choose a patient from the drop down. In a real world scenario, this could be a search.
@@ -75,26 +75,26 @@ The Provider Facing app is used by the clinician during a well care visit. It di
 ### Growth Charts ###  
 The Growth charts tab shows three charts, BMI, Length/Stature, and Weight. The app draws statistical percentile lines for each chart. The most important chart on this page is the BMI chart. The BMI chart shows BMI percentiles up to 95% and it also displays 110% to 200% of 95 percentile value of BMI. The BMI value between 85-95 percentile is considered overweight. And above 95 percentile is considered obese. The 110% to 200% line shows how obese a child is. The app pulss the patient’s age, height and weight from FHIR server and calculates his BMI and its percentile value and displays it on the chart’s percentile region. Moreover, it calculates the patient’s height and weight percentile and displays them on the height and weight charts. 
 
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/ColorCodingCharts.PNG "ColorCodingCharts")
+![alt text](./IMG/ColorCodingCharts.PNG "ColorCodingCharts")
 
 ### Healthy Habit History ###  
 The Healthy Habit History tab shows the responses from the questionnaire the patient fills out in the patient facing app. There is a Progress tracker to track questionnaire responses for each question. At the bottom, a recent copy of the questionnaire response can be accessed by the provider. Also, responses are color coded to help bring attention to bad habits to the healthcare provider.
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/QuestionnaireResponse.PNG "QuestionnaireResponse")
+![alt text](./IMG/QuestionnaireResponse.PNG "QuestionnaireResponse")
 
 ### Healthy Habit Goals ###  
 The Healthy Habit Goal tab is a way for the provider to set healthy habit goals with the patient. The questionnaire is also stored on the local FHIR server. The provider can Save and Print the goals which generates a nice printable page to hand over to the patient before they leave the office visit.  
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/HealthyHabitGoal.PNG "Healthy Habit Goals")
+![alt text](./IMG/HealthyHabitGoal.PNG "Healthy Habit Goals")
 
 ### Referrals/Recommendations ###
 
 Under the referrals tab, the provider can refer patient to a specialist and also supply a recommended coding for the referral. 
 Once the referrals are selected the provider can hit the "Send Refferal" button and referrals are sent to the local FHIR server.
 
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/referrals.PNG "Referrals")
+![alt text](./IMG/referrals.PNG "Referrals")
 
 A provider can also send recommendations for farmers markets or parks in the patient’s vicinity. The provider can send recommendations via SMS or email. See Recommendation Engine below for more details.
 
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/recommendations.PNG "Recommendations")
+![alt text](./IMG/recommendations.PNG "Recommendations")
 
 ## Recommendations Engine ##  
 The Recommendations Engine app is used communicate useful resources for the patient from the provider. If a patient is shown to be obese and has areas on the questionnaire that needs improvement such as eating better or getting more activity, the provider can call upon the recommendations engine to find Farmers Markets in the patient's local zip code. The recommendations engine can also look for nearby local city or county parks. The patient can either receive a Text message or email with the results. The Recommendations engine is called inside of the patient and provider facing apps.  
@@ -105,5 +105,5 @@ The Recommendations Engine app is used communicate useful resources for the pati
 3. Enter Zip Code  
 4. Enter Email Address or Phone Number based on the selection from Step 1.
 
-![alt text](https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR/blob/master/Manual/IMG/EmailRecommendation.PNG "EmailRecommendations")
+![alt text](./IMG/EmailRecommendation.PNG "EmailRecommendations")
 

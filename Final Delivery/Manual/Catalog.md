@@ -2,7 +2,7 @@
 **Project Name:** Health Weight on FHIR  
 **Team Name:** Team ScienceFreaks  
 **Team Members:** Lance Hundt, Michael Roth, Hassan Borteh, Joseph George, Jim Vaughan, Brodrick Stigall  
-**Github Link:** https://github.gatech.edu/gt-hit-fall2017/Health-Weight-on-FHIR  
+**Github Link:** https://github.com/CDCgov/GaTech-Fall2017-Goodman-HealthWeight-TeamScienceFreaks  
 
 ## Directory Structure ##  
 **Health-Weight-on-FHIR (Directory)**  
