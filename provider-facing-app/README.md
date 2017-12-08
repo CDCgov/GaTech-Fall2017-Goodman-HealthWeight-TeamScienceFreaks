@@ -7,7 +7,7 @@ Then install http-server from a terminal window (if on windows, the "Node.js com
 
 To run the server execute the following command:
 4.  `http-server /path/to/index.html`
-5.  local app should now be available at localhost:8080 in your browser
+5.  local app should now be available at localhost:8081 in your browser
 
 Below are the requirements to run the SMART Growth Chart components of our app
 
